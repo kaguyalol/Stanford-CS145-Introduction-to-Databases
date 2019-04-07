@@ -9,5 +9,17 @@
   - Attributes: column names
   - Schema: a set of attributes, e.g. `Movies(title, year, length, genre)`
   - Tuples: a row of relation(other than header), a tuple of attribute values, e.g. `(Gone With the Wind, 1939, 231, drama)`
-  - Domains: 
+  - Domains: data type, e.g. `Movies(title:string, year:integer, length:integer, genre:string)`
+
+3. Keys of relations
+  - A set of attributes form a key, values of those key attributes cannot be the same for two tuples
+  - e.g. a key consists of _title_ and _year_, there are three movie called King Kong, then their years have to be different, `Movies(_title_, _year_, length, genre)`
+  
+    ```sql
+    MovieStar(
+        _name_: string,
+        address: string,
+        gender: string
+    )
+    ```
  
