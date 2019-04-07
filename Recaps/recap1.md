@@ -147,6 +147,18 @@
       3 | 4 | 2 | 5 | 6
       3 | 4 | 4 | 7 | 8
       3 | 4 | 9 | 10 | 11
+  
+  - Natural Joins
+    * R and S agree on common attributes
+    * atrributes can be any orders
+    * join of R and S, common attribute _B_, join on B
+      
+      A | B | C | D        
+      ---|---|---|---       
+      1 | 2 | 5 | 6     
+      3 | 4 | 7 | 8
+      
+ 
       
       
  
