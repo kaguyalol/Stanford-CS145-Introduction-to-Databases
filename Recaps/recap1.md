@@ -89,5 +89,14 @@
   - Projection
     * Produce a new relation that has only some R's columns
     * Duplicate values will be removed
-    $\pi$
+    * Pi_A1, A2, ... , An(R)
+    * Pi_title, year, length(Movies)
+    
+      title | year | length
+      --- | --- | ---
+      Star War | 1977 | 124
+      Galaxy | 1999 | 104
+      Wayne's | 1992 | 95
+    
+    
   
