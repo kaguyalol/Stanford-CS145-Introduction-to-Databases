@@ -40,3 +40,4 @@
       address VARCHAR(255),
       birthday DATE
   );
+  ```
