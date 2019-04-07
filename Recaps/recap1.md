@@ -126,6 +126,12 @@
     * R X S
     * Union of schemas of two
     * Common attributes: A in both, name R.A, S.A
+    * e.g. R has 2 rows, S has 3 rows, then R X S -> 2 * 3 = 6 rows
+    
+      A | B         B | C | D
+      ---|---       ---|---|---|
+      1 | 2      
+      3 | 4
     
  
     
