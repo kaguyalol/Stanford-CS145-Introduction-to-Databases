@@ -22,10 +22,21 @@
         _name_: string,
         address: string,
         gender: string
-    )
+    );
     ```
 
 4. Data Types
   - `CHAR(n)` vs `VARCHAR(n)`
-    * `CHAR` implies that short string pad space to fit fixed length, e.g. `CHAR(5)`, `'foo  '`
+    * `CHAR` implies that short string pad space to fit fixed length, e.g. `CHAR(5)` -> `'foo  '`
     * `VARCHAR` string-length is used
+  - `BIT(n)` vs `BIT VARYING(n)`
+    * `BIT(n)` denotes string of length n
+    * `BIT VARYING(n)` denotes string up to length n
+  - `BOOLEAN`(TRUE, FALSE, UNKNOWN)
+  - `INT`/`INTEGER` vs `SHORT INT`
+  ```sql
+  CREATE TABLE MovieStar(
+      name    CHAR(30),
+      address VARCHAR(255),
+      birthday DATE
+  );
