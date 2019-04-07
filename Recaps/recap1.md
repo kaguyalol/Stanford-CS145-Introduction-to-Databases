@@ -86,7 +86,8 @@
     * Difference: R - S (differ to S- R)
     
     _Must have the same set of attributes_
-  - Projection
+    
+  - Projection(_on columns_)
     * Produce a new relation that has only some R's columns
     * Duplicate values will be removed
     * Pi_A1, A2, ... , An(R)
@@ -111,6 +112,20 @@
       | ---
       | sciFi
       | comedy
+ 
+  - Selection(_on rows_)
+    * produce a new relation with some R's tuples satisfying some coditions
+    * sigma_length > 100(Movies)
+    
+      title | year | length | genre
+      --- | --- | --- | ---
+      Star War | 1977 | 124 | sciFi
+      Galaxy | 1999 | 104 | comedy
+  
+  - Product
+    * R X S
+    * Union of schemas of two
+    * Common attributes: A in both, name R.A, S.A
     
  
     
