@@ -158,7 +158,22 @@
       1 | 2 | 5 | 6     
       3 | 4 | 7 | 8
       
- 
+  - Theta-Joins
+    * Product of R and S
+    * Select tuples that satisfy condition C
+    * R >< D % A == 0 S(_condition D % A == 0)
+      
+      A | R.B | S.B | C | D        
+      ---|---|---|---|---      
+      1 | 2 | 2 | 5 | 6
+      1 | 2 | 4 | 7 | 8
+      1 | 2 | 9 | 10 | 11
+  
+  - Combining Operations to Form Queries
+  
+      
+    
+    
       
       
  
