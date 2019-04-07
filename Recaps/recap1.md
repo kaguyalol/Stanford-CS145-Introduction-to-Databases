@@ -51,4 +51,31 @@
     ```sql
     ALTER TABLE MovieStar DROP birthday;
     ```
+ 
+6. Default Value
+  ```sql
+  ALTER TABLE MovieStar ADD phone CHAR(26) DEFAULT '00000';
+  ```
+
+7. Declaring Keys
+  - `PRIMARY KEY` or `UNIQUE`
+  - Declare on the right side of the attribute when creating a new schema
+    * use for one attribute in the key
+    ```sql
+    CREATE TABLE MovieStar(
+      name    CHAR(30) PRIMARY KEY,
+      address VARCHAR(255),
+      birthday DATE
+     );
+     ```
+  - Declare by adding a statement
+    * use for both multiples attributes and one attributes
+    ```sql
+    CREATE TABLE MovieStar(
+      name    CHAR(30),
+      address VARCHAR(255),
+      birthday DATE,
+      PRIMARY KEY(name, birthday)
+     );
+    ```
   
