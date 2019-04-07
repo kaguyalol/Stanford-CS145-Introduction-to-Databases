@@ -41,3 +41,14 @@
       birthday DATE
   );
   ```
+
+5. Modify Relations Schema
+  - ADD
+    ```sql
+    ALTER TABLE MovieStar ADD phone CHAR(26);
+    ```
+  - DROP
+    ```sql
+    ALTER TABLE MovieStar DROP birthday;
+    ```
+  
