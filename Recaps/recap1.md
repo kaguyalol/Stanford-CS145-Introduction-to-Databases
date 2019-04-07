@@ -90,6 +90,13 @@
     * Produce a new relation that has only some R's columns
     * Duplicate values will be removed
     * Pi_A1, A2, ... , An(R)
+    
+    title | year | length | genre
+      --- | --- | --- | ---
+      Star War | 1977 | 124 | sciFi
+      Galaxy | 1999 | 104 | comedy
+      Wayne's | 1992 | 95 | comedy
+    
     * Pi_title, year, length(Movies)
     
       title | year | length
@@ -97,6 +104,15 @@
       Star War | 1977 | 124
       Galaxy | 1999 | 104
       Wayne's | 1992 | 95
+    
+    * Pi_genre(Movies)(_Duplicate values will be removed_)
+      
+      |genre
+      | ---
+      | sciFi
+      | comedy
+    
+ 
     
     
   
