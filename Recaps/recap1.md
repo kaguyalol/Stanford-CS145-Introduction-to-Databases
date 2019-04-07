@@ -78,4 +78,16 @@
       PRIMARY KEY(name, birthday)
      );
     ```
+ 
+ 8. Relational Algebra
+  - Set Operations on Relations
+    * Union: R U S
+    * Intersect: R  S
+    * Difference: R - S (differ to S- R)
+    
+    _Must have the same set of attributes_
+  - Projection
+    * Produce a new relation that has only some R's columns
+    * Duplicate values will be removed
+    $\pi$
   
