@@ -2,4 +2,5 @@
 
 ### Timeline
 *04/07/2019*
-- [ ] reading: FCDB/3 2.1--2.3
+- [x] reading: FCDB/3 2.1--2.3
+- [ ] reading: FCDB/3 2.4, 5.1
