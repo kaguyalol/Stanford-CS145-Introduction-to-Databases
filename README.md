@@ -1,5 +1,5 @@
 # StanfordCS145 Introduction to Databases
-------
+
 ### Timeline
 ------
 *04/07/2019*
