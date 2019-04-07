@@ -91,7 +91,7 @@
     * Duplicate values will be removed
     * Pi_A1, A2, ... , An(R)
     
-    title | year | length | genre
+      title | year | length | genre
       --- | --- | --- | ---
       Star War | 1977 | 124 | sciFi
       Galaxy | 1999 | 104 | comedy
