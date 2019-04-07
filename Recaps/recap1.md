@@ -1,3 +1,5 @@
+## Recap 1
+
 1. Data Models
   - Relational models
     * Based on table
@@ -22,4 +24,8 @@
         gender: string
     )
     ```
- 
+
+4. Data Types
+  - `CHAR(n)` vs `VARCHAR(n)`
+    * `CHAR` implies that short string pad space to fit fixed length, e.g. `CHAR(5)`, `'foo  '`
+    * `VARCHAR` string-length is used
