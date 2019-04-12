@@ -11,10 +11,11 @@
   - `SELECT`
     * all movies from Disney Studio in 1990
       ```sql
-      SELECT *
+      SELECT * -- use for selecting attributes, _NOT_ ROWS
       FROM Movies
       WHERE year = 1990 AND studioName = 'Disney';
       ```
+    * 
   
   
 1. Indexes in SQL
