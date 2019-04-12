@@ -40,7 +40,8 @@
       ---|---|---
       Pretty Woman | 1.8| hrs.
       ... | ...| hrs.
-   - Operations
+      
+  - Operations
     * Not equal `<>`, concate `||`
     * `>`, `<`, OR, AND
       ```sql
@@ -48,20 +49,39 @@
       FROM Movies
       WHERE (year > 1970 OR length < 90) AND studioName = 'MGM';
       ```
-   * Two string comparision
-    * delete padding, 'string' = '  string'
-    * lexicographic order
+    * Two string comparision
+      * delete padding, 'string' = '  string'
+      * lexicographic order
     
-   * Pattern match `s LIKE p`
-    * s is a string, p is pattern
-    * Retrive a movie name 'star something'
+    * Pattern match `s LIKE p`
+      * s is a string, p is pattern
+      * Retrive a movie name 'star something'
+        ```sql
+        SELECT title
+        FROM Movies
+        WHERE title LIKE 'Star ____';
+        ```
+    * NULL
+      * `x IS NULL`, `x IS NOT NULL`
+      * If x is null, x+3 is null
+      * `TRUE`, `FALSE`, `UNKOWN`
+        * `UNKOWN` AND `TRUE` -> `UNKNOWN`
+      * Find all non-NULL length tuples
+        ```sql
+        SELECT *
+        FROM Movies
+        WHERE length <= 120 OR length > 120; -- if there are null values in length, then do not return them
+        ```
+  - Ordering
+    * Ascending default
+    * List by length, among the same lengths, alphabetically
       ```sql
-      SELECT title
+      SELECT *
       FROM Movies
-      WHERE title LIKE 'Star ____';
+      WHERE year = 1990 AND studioName = 'Disney'
+      ORDER BY length, title; -- sort happens on all columns, if select producer, also valid
       ```
+ 
+3. Queries involve more than one relations
   
-  
-1. Indexes in SQL
-  - Indexes is binary search tree
   
