@@ -111,8 +111,7 @@
       FROM MovieStar
       WHERE gender = 'F')
       INTERSECT
-      (
-      SELECT name, address
+      (SELECT name, address
       FROM MovieExec
       WHERE netWorth > 10000000);
       ```
@@ -134,5 +133,8 @@
       (SELECT movieTile AS title, movieYear AS year
       FROM StarsIn);
       ```
+ 
+4. Subqueries
+  - 
   
   
