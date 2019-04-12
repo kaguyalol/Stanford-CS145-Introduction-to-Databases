@@ -48,7 +48,7 @@
       FROM Movies
       WHERE (year > 1970 OR length < 90) AND studioName = 'MGM';
       ```
-    * Two string comparision
+   * Two string comparision
       * delete padding, 'string' = '  string'
       * lexicographic order
   
