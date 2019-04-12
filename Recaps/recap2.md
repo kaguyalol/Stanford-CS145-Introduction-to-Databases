@@ -83,5 +83,12 @@
       ```
  
 3. Queries involve more than one relations
+  - Products and Joins
+    ```sql
+    SELECT name
+    FROM Movies, MoviesExec -- from two tuples
+    WHERE title = 'Star Wars' AND producerC# = cert#; 
+    -- producerC# from Movies must have same value as that of cert# from MoviesExec
+    ```
   
   
