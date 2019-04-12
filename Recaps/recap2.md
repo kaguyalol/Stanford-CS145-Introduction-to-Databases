@@ -34,12 +34,13 @@
       ```
     * Constants in `SELECT`
       ```sql
-      SELECT title AS name, length*0.01667 AS length, '.hrs' AS inHours
+      SELECT title AS name, length*0.01667 AS length, '.hrs' AS inHours -- '.hrs' in every row
       ```
       titl | length | inHours
       ---|---|---
       Pretty Woman | 1.8| hrs.
-      
+      ---|---|---
+      ... | ...| hrs.
   
   
 1. Indexes in SQL
