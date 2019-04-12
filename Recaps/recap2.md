@@ -97,8 +97,42 @@
     WHERE Movies.address = MoviesExec.address;
     ```
   - Tuple Variables
+    * From the same table, diferent tuples
     ```sql
-    
+    SELECT star1.name, star2.name
+    FROM MovieStar star1, MovieStar star2
+    WHERE star1.address = star2.address AND star1.name < star2.name;
     ```
+  - Union, Intersect, Difference
+    * Intersect
+      ```sql
+      -- select name and address of all female stars who also with net worth greater than 10000000
+      (SELECT name, address
+      FROM MovieStar
+      WHERE gender = 'F')
+      INTERSECT
+      (
+      SELECT name, address
+      FROM MovieExec
+      WHERE netWorth > 10000000);
+      ```
+    * Except
+      ```sql
+      -- select movie stars who are not excecutives
+      (SELECT name, address
+      FROM MovieStar)
+      EXCEPT
+      (SELECT name, address
+      FROM MovieExec);
+      ```
+    * Union
+      ```sql
+      -- union movies in Movies and StarsIn
+      (SELECT title, year
+      FROM Movies)
+      UNION
+      (SELECT movieTile AS title, movieYear AS year
+      FROM StarsIn);
+      ```
   
   
