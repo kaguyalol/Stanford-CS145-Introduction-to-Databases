@@ -134,7 +134,7 @@
       FROM StarsIn);
       ```
  
-4. Subqueries
-  - 
+4. Join Expression
+  - Cross Join(Product)
   
   
