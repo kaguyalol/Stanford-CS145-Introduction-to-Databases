@@ -39,8 +39,18 @@
       titl | length | inHours
       ---|---|---
       Pretty Woman | 1.8| hrs.
-      ---|---|---
       ... | ...| hrs.
+   - Operations
+    * Not equal `<>`, concate `||`
+    * `>`, `<`, OR, AND
+      ```sql
+      SELECT title
+      FROM Movies
+      WHERE (year > 1970 OR length < 90) AND studioName = 'MGM';
+      ```
+    * Two string comparision
+      * delete padding, 'string' = '  string'
+      * lexicographic order
   
   
 1. Indexes in SQL
