@@ -135,8 +135,17 @@
       ```
  
 4. Join Expression
+  ```
+  StarsIn(movieTitle, movieYear, starName)
+  ```
   - Cross Join(Product)
     ```sql
-    
+    -- 5 columns and 18 rows
+    Movies CROSS JOIN StarsIn;
+    ```
+  - Theta Join
+    ```sql
+    Movies JOIN StarsIn ON
+            title = movieTitle AND year = movieYear;
     ```
   
