@@ -90,5 +90,15 @@
     WHERE title = 'Star Wars' AND producerC# = cert#; 
     -- producerC# from Movies must have same value as that of cert# from MoviesExec
     ```
+  - Disambiguating Atrributes
+    ```sql
+    SELECT Movies.name, MoviesExec.name
+    FROM Movies, MoviesExec
+    WHERE Movies.address = MoviesExec.address;
+    ```
+  - Tuple Variables
+    ```sql
+    
+    ```
   
   
