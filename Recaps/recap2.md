@@ -49,8 +49,17 @@
       WHERE (year > 1970 OR length < 90) AND studioName = 'MGM';
       ```
    * Two string comparision
-      * delete padding, 'string' = '  string'
-      * lexicographic order
+    * delete padding, 'string' = '  string'
+    * lexicographic order
+    
+   * Pattern match `s LIKE p`
+    * s is a string, p is pattern
+    * Retrive a movie name 'star something'
+      ```sql
+      SELECT title
+      FROM Movies
+      WHERE title LIKE 'Star ____';
+      ```
   
   
 1. Indexes in SQL
