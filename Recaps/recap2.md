@@ -140,12 +140,35 @@
   ```
   - Cross Join(Product)
     ```sql
-    -- 5 columns and 18 rows
+    -- 9 columns and 18 rows
     Movies CROSS JOIN StarsIn;
     ```
   - Theta Join
     ```sql
+    -- 9 columns
     Movies JOIN StarsIn ON
             title = movieTitle AND year = movieYear;
     ```
+    ```sql
+    -- 7 columns
+    SELECT title, year, length, genre, studioName, producerC#, starName
+    FROM Movies JOIN StarsIn ON
+    title = movieTitle AND year = movieYear;
+    ```
+  - Natural Join
+    ```sql
+    MovieStar NATURAL JOIN MovieExec;
+    ```
+  - Outerjoins
+    * Full outerjoins
+      ```sql
+      -- columns are same as natural join, but rows are kind of different, with null values
+      MovieStar NATURAL FULL OUTER JOIN MovieExec;
+      ```
+    * Left outerjoins
+      ```sql
+      -- null value based on left relation(table)
+      MovieStar NATURAL LEFT OUTER JOIN MovieExec;
+      ```
+    
   
