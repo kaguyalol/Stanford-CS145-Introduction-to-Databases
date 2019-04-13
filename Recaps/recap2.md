@@ -160,15 +160,21 @@
     MovieStar NATURAL JOIN MovieExec;
     ```
   - Outerjoins
-    * Full outerjoins
+    * Natural Full Outer Join
       ```sql
       -- columns are same as natural join, but rows are kind of different, with null values
       MovieStar NATURAL FULL OUTER JOIN MovieExec;
       ```
-    * Left outerjoins
+    * Natural Left Outer join
       ```sql
       -- null value based on left relation(table)
       MovieStar NATURAL LEFT OUTER JOIN MovieExec;
+      ```
+    * Full Outer Join On(outer theta join)
+      ```sql
+      -- at least one tuple satisfy the condition, other are same as products, but with null 
+      MovieStar FULL OUTER JOIN StarsIn ON
+      title = movieTitle AND year = movieYear;
       ```
     
   
