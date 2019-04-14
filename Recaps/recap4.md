@@ -22,7 +22,7 @@
   - Delete tuple in MovieExec, the value(_non-Null_) of cert# also appears in precC# in Studio
   - Update the value(_non-Null_) of cert#, the old value also appears in precC# in Studio
   
-  ***First two violations cannot change, the last two can be avoided by changing referenced relation***
+    ***First two violations cannot change, the last two can be avoided by changing referenced relation***
 
 4. References Relations Policies
   - Default Policy
