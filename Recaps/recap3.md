@@ -20,3 +20,12 @@
   (SELECT name 
   FROM Studio);
   ```
+
+3. `UPDATE`
+  ```sql
+  UPDATE MovieExec
+  SET name = 'Pres.' || name -- || means concate, adding prefix for name
+  WHERE cert# IN 
+  (SELECT presC#
+  FROM Studio);
+  ```
