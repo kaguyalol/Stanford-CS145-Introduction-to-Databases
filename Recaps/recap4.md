@@ -13,20 +13,18 @@
   - A value appear in one relation must also appear in the primary-key components of another relation
   - Declaring
     * The referenced attributes in second relation must be PRIMARY KEY or UNIQUE
-    * Values of foreign key in the first relation must also appear in the referenced attributes of some tuple in the second relation
+    * Values of foreign key in the first relation must also appear in the referenced attributes of _some tuple_ in the second relation
+      * Foreign key value can be null, then no requirement of appearance of null in second table
 
 3. References Relations Policies
   - Default Policy
-  
-    Reject violation modifications
+    * Reject violation modifications
     
   - Cascade Policy
-  
-    update or delete value in one table, system will _automatically_ update or delete value in other table
+    * Update or delete value in one table, system will _automatically_ update or delete value in other table
     
   - Set-Null Policy
-  
-    delete one and system change another to null
+    * Delete one and system change another to null
   
   ```sql
   CREATE TABLE Studio (
