@@ -17,10 +17,11 @@
       * Foreign key value can be null, then no requirement of appearance of null in second table
 
 3. Run-Time ERROR
-  - *Insert value(_non-Null_) of presC#, but no tuple in MovieExec has such value of cert# attribute*
-  - *Update value(_non-Null_) of presC#, but no tuple in MovieExec has such value of cert# attribute*
+  - **Insert value(_non-Null_) of presC#, but no tuple in MovieExec has such value of cert# attribute**
+  - **Update value(_non-Null_) of presC#, but no tuple in MovieExec has such value of cert# attribute**
   - Delete tuple in MovieExec, the value(_non-Null_) of cert# also appears in precC# in Studio
   - Update the value(_non-Null_) of cert#, the old value also appears in precC# in Studio
+  ***First two violations cannot change, the last two can be avoided by changing referenced relation***
 
 4. References Relations Policies
   - Default Policy
