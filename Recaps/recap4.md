@@ -21,4 +21,14 @@
   - Set-Null Policy
   
     delete one and system change another to null
+  
+  ```sql
+  CREATE TABLE Studio (
+    name CHAR(30) PRIMAEY KEY,
+    address VARCHAR(255),
+    presC# INT REFERENCES MovieExec(cert#)
+      ON DELETE SET NULL
+      ON UPDATE SET CASCADE
+  );
+  ```
     
