@@ -11,6 +11,9 @@
 
 2. Foreign Key Constraints
   - A value appear in one relation must also appear in the primary-key components of another relation
+  - Declaring
+    * The referenced attributes in second relation must be PRIMARY KEY or UNIQUE
+    * Values of foreign key in the first relation must also appear in the referenced attributes of some tuple in the second relation
 
 3. References Relations Policies
   - Default Policy
