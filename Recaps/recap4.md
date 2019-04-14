@@ -16,7 +16,11 @@
     * Values of foreign key in the first relation must also appear in the referenced attributes of _some tuple_ in the second relation
       * Foreign key value can be null, then no requirement of appearance of null in second table
 
-3. References Relations Policies
+3. Run-Time ERROR
+  - Insert value of presC#, but no tuple in MovieExec has such value of cert# attribute
+  - 
+
+4. References Relations Policies
   - Default Policy
     * Reject violation modifications
     
@@ -36,7 +40,7 @@
   );
   ```
 
-4. Deferred Checking of Constraints
+5. Deferred Checking of Constraints
   - Insert new tuple to MovieExec with new cert# before inserting new one to Studio
   - 
     
