@@ -9,7 +9,10 @@
   );
   ```
 
-2. References Relations Policies
+2. Foreign Key Constraints
+  - A value appear in one relation must also appear in the primary-key components of another relation
+
+3. References Relations Policies
   - Default Policy
   
     Reject violation modifications
@@ -31,4 +34,8 @@
       ON UPDATE SET CASCADE
   );
   ```
+
+4. Deferred Checking of Constraints
+  - Insert new tuple to MovieExec with new cert# before inserting new one to Studio
+  - 
     
