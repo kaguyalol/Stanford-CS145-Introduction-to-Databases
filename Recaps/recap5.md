@@ -31,3 +31,18 @@
     CHECK (gender = 'F' OR name NOT LIKE 'Ms.%')
    );
    ```
+ 
+ 
+3. Modification of Constaints
+   - Giving Name to Constraints
+    ```sql 
+    name CHAR(30) CONSTRAINTS NameIsKey PRIMARY KEY,
+    ```
+    ```sql
+    CONSTRAINTS RightTitle
+      CHECK (gender = 'F' OR name NOT LIKE 'Ms.%')
+    ```
+    ```sql
+    gender CHAR(1) CONSTRAINTS NoAngro
+      CHECK (gender IN ('F', 'M')),
+    ```
