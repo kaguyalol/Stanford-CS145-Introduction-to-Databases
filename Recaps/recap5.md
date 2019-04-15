@@ -62,6 +62,9 @@
   - Schema element
   - `CREATE`
     ```sql
+    /** involves two relations
+    * no one can be a president of a studio unless net worth >= 1000000
+    */
     CREATE ASSERTION RichPres CHECK
       (NOT EXISTS
         (SELECT Studio.name
