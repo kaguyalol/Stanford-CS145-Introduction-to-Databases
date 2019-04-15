@@ -63,7 +63,7 @@
   - `CREATE`
     ```sql
     /** involves two relations
-    * no one can be a president of a studio unless net worth >= 1000000
+    *   no one can be a president of a studio unless net worth >= 1,000,000
     */
     CREATE ASSERTION RichPres CHECK
       (NOT EXISTS
@@ -72,4 +72,24 @@
         WHERE presC# = cert# AND netWorth < 1000000)
       );
     ```
+    ```sql
+    /** involves one relation
+    *   total length of all movies of a studio shall not exceed 10,000 minutes
+    */
+    CREATE ASSERTION SumLength CHECK
+      (10000 >= ALL
+        (SELECT SUM(length)
+        FROM Movies
+        GROUP BY studioName)
+      );
+    
+    /** can be a tuple-based check   
+    */
+    CHECK (10000 >= ALL
+      (SELECT SUM(length)
+        FROM Movies
+        GROUP BY studioName)
+      );
+    ```
+    
   
