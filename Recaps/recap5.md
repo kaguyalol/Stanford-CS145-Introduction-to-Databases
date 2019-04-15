@@ -91,5 +91,10 @@
         GROUP BY studioName)
       );
     ```
+    * `ASSERTION` will delete tuples that do not satisfy the condition
+    * `CHECK` will not delete, if not satisfy, then violate
+    
+ - `DROP ASSERTION <assertion name>`
+ 
     
   
