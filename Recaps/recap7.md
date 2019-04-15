@@ -26,3 +26,7 @@
         FROM Movies
         WHERE studioName = 'Paramount';
       ```
+  - Remove
+    * `DROP VIEW <view name>`
+      - only drop view, no effect on table
+    * `DROP TABLE` also drop views
