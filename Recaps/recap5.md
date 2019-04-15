@@ -94,7 +94,13 @@
     * `ASSERTION` will delete tuples that do not satisfy the condition
     * `CHECK` will not delete, if not satisfy, then violate
     
- - `DROP ASSERTION <assertion name>`
+   - `DROP ASSERTION <assertion name>`
+
+5. Triggers
+  - Types
+    * insert/delete/update to relation
+    * transaction end(even partition)
+ 
  
     
   
