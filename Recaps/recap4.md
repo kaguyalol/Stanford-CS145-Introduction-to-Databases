@@ -29,22 +29,37 @@
     * Reject violation modifications
     
   - Cascade Policy
-    * Update or delete value in one table, system will _automatically_ update or delete value in other table
+    * Update or delete value in referenced table, system will _automatically_ update or delete value in referencing table
     
   - Set-Null Policy
-    * Delete one and system change another to null
+    * Delete one in referenced table and system change another to null
   
-  ```sql
-  CREATE TABLE Studio (
-    name CHAR(30) PRIMAEY KEY,
-    address VARCHAR(255),
-    presC# INT REFERENCES MovieExec(cert#)
-      ON DELETE SET NULL
-      ON UPDATE SET CASCADE
-  );
-  ```
+    ```sql
+    CREATE TABLE Studio (
+      name CHAR(30) PRIMAEY KEY,
+      address VARCHAR(255),
+      presC# INT REFERENCES MovieExec(cert#)
+        ON DELETE SET NULL  -- delete tuples of MovieExec, set presC# to null
+        ON UPDATE SET CASCADE  -- update cert# in MovieExec, change presC# in Studio
+    );
+    ```
 
 5. Deferred Checking of Constraints
   - Insert new tuple to MovieExec with new cert# before inserting new one to Studio
-  - 
+  - If declaring cert# be a foreign key referencing presC#, then presC# shou be UNIQUE
+    - Cannot insert any new tuple to both MovieExec and Studio
+      * Group into one transaction
+      * DBMS check the transaction after the whole transaction finished
+      * DEFERABLE/ NOT DEFERABLE(default)
+        - DEFERRABLE INITIALLY DEFERRED(after transaction)
+        - DEFERRABLE INITIALLY IMMEDIATE(after every statement)
+        ```sql
+        CREATE TABLE Studio (
+          name CHAR(30) PRIMARY KEY,
+          address VARCHAR(255),
+          presC# INT UNIQUE
+            REFERENCES MovieExec(cert#)
+            DEFERRABLE INITIALLY DEFERRED
+        );
+        ```
     
