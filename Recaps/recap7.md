@@ -30,3 +30,12 @@
     * `DROP VIEW <view name>`
       - only drop view, no effect on table
     * `DROP TABLE` also drop views
+  
+  - Update
+
+2. Index
+  -  `CREATE`
+    ```sql
+    CREATE INDEX YearIndex ON Movies(year);
+    ```
+    
