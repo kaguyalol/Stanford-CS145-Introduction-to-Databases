@@ -37,9 +37,23 @@
     SET balance = balance - 100
     WHERE acctNo = 456;
     ```
-  * combine such two updates, atomically
-  * either all operations are performed or none are
-- `START TRANSACTION`, `COMMIT`, `ROLLBACK`
+   * combine such two updates, atomically
+   * either all operations are performed or none are
+ - `START TRANSACTION`, `COMMIT`, `ROLLBACK`
+ 
+ - Read-only Transactions
+  ```sql
+  SET TRANSACTIONS READ ONLY;
+  ```
+ - Dirty Reads
+  * _dirty date_ means data written by a transaction that have not been commited
+  * _dirty reads_ means read of dirty data by another transaction
+  * 
+
+
+ 
+ 
+
 
     
     
