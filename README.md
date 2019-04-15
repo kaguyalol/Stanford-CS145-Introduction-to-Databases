@@ -17,7 +17,8 @@
 - [x] recap 4
 
 *04/15/2019*
-- [ ] reading: FCDB/3 7.3-7.5
-- [ ] recap 5
+- [x] reading: FCDB/3 7.3-7.5
+- [x] recap 5
 - [ ] reading: FCDB/3 6.6, 8
+- [ ] recap 6
 
