@@ -1,7 +1,7 @@
 ## Recap 6
 
 1. Transaction
-  - A group of operations that need to be performed together
+  - A group of operations that need to be performed together, executed atomically
     * relation
       `Flights(fltNo, fltDate, seatNo, seatStatus)`
     * query
@@ -37,5 +37,9 @@
     SET balance = balance - 100
     WHERE acctNo = 456;
     ```
+  * combine such two updates, atomically
+  * either all operations are performed or none are
+- `START TRANSACTION`, `COMMIT`, `ROLLBACK`
+
     
     
