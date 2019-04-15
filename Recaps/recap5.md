@@ -51,5 +51,22 @@
       ```sql
       ALTER TABLE MovieStar DROP CONSTRAINT NameIsKey;
       ```
+    * Tuple-based `ADD`
+      ```sql
+      ALTER TABLE MovieStar ADD CONSTRAINT NameIsKey
+        PRIMARY KEY (name);
+      ```
     
-4. 
+4. Assertions
+  - An assertion is a boolean-valued SQL expression that must be _true_ at all times
+  - Schema element
+  - `CREATE`
+    ```sql
+    CREATE ASSERTION RichPres CHECK
+      (NOT EXISTS
+        (SELECT Studio.name
+        FROM MovieExec, Studio
+        WHERE presC# = cert# AND netWorth < 1000000)
+      );
+    ```
+  
