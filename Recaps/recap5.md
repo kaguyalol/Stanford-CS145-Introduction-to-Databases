@@ -21,3 +21,13 @@
       * Delete value in MovieExec is invisible to the `CHECK`, now that constraints on presC# is violated
     
     
+2. Constraints on Tuple
+   ```sql
+   CREATE TABLE MovieStar (
+    name CHAR(30) PRIMARY KEY,
+    address VARCHAR(255),
+    gender CHAR(1),
+    birthday DATE,
+    CHECK (gender = 'F' OR name NOT LIKE 'Ms.%')
+   );
+   ```
