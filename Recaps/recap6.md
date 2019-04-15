@@ -31,6 +31,7 @@
     ```
     
    * substract
+   
     ```sql
     UPDATE Accounts
     SET balance = balance - 100
