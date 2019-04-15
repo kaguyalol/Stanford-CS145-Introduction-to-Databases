@@ -21,12 +21,15 @@
   - Atomicity
    * relation
     `Accounts(acctNo, balance)`
+    
    * add
+   
     ```sql
     UPDATE Accounts
     SET balance = balance + 100
     WHERE acctNo = 123;
     ```
+    
    * substract
     ```sql
     UPDATE Accounts
