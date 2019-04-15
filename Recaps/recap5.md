@@ -46,3 +46,10 @@
     gender CHAR(1) CONSTRAINTS NoAngro
       CHECK (gender IN ('F', 'M')),
     ```
+  - Altering Constraints on Tables
+    * `DROP`
+      ```sql
+      ALTER TABLE MovieStar DROP CONSTRAINT NameIsKey;
+      ```
+    
+4. 
